@@ -1,6 +1,6 @@
-# wall
+# photy
 
-A new Flutter project.
+A simple wallpaper app that let u downlaod high defintion wallpaper for free
 
 ## Getting Started
 
