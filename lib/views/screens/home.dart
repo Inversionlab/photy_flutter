@@ -42,7 +42,9 @@ class  _home extends State<home>{
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Colors.blueAccent,Colors.cyan
+                  Color(0xff004e92),
+                  Color(0xff000428),
+
                 ],
                     begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
@@ -61,7 +63,7 @@ class  _home extends State<home>{
 
         ),
 
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Color(0xff000428),
         body: TabBarView(
           children: [
 
@@ -139,7 +141,7 @@ class  _home extends State<home>{
                               child: CachedNetworkImage(
                                 imageUrl: tdlist[index].src,
                                 fit: BoxFit.fill,
-                                placeholder:(context,url)=>SizedBox(child: new CircularProgressIndicator(color: Colors.cyanAccent,),height: 2,width: 2,),
+                                placeholder:(context,url)=>SizedBox(child: new CircularProgressIndicator(color: Color(0x000428),),height: 2,width: 2,),
                                 errorWidget: (context,url,error)=>new Icon(Icons.downloading),
                               ),
                             ),
@@ -190,13 +192,7 @@ class  _home extends State<home>{
             ),
           ],
         ),
-        floatingActionButton: FloatingActionButton(onPressed: () {
 
-        },
-          backgroundColor: Colors.indigo,
-          child: Icon(Icons.navigate_next),
-
-        ),
       ),
     );
   }

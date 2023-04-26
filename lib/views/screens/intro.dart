@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:wall/views/screens/home.dart';
 class intro extends StatelessWidget {
@@ -13,8 +15,10 @@ class intro extends StatelessWidget {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              Colors.blue,
-              Colors.cyan
+              Color(0xff0F2027),
+              Color(0xff203A43),
+              Color(0xff2C5364)
+              
             ],
           )
         ),
@@ -23,8 +27,8 @@ class intro extends StatelessWidget {
             children: [
 
               Image.asset("images/tt.png",height: 300,width: 300,),
-              Text("H E Y Y...",style: TextStyle(fontSize: 50,fontWeight:FontWeight.bold),),
-              Text(" WELCOME...",style: TextStyle(fontSize: 50,fontWeight:FontWeight.bold),),
+              Text("H E Y Y...",style: TextStyle(fontSize: 50,fontWeight:FontWeight.bold,color: Colors.white),),
+              Text(" WELCOME...",style: TextStyle(fontSize: 50,fontWeight:FontWeight.bold,color:Colors.white),),
 
               Padding(
                 padding: EdgeInsets.only(left: 30,right: 30),
@@ -33,7 +37,7 @@ class intro extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.bold,fontSize:20),
                     children: [
                       WidgetSpan(child: Icon(Icons.warning_amber_rounded,size: 40,color: Colors.redAccent,)),
-                      TextSpan(text: "This is pre build app..\nif images are not loading \nTRY TO SCROLL MORE.."),
+                      TextSpan(text: "This is pre build app..\nif images are not loading \nTRY TO SCROLL MORE..",style:TextStyle(color: Colors.white54)),
                     ],
                   )
                 ),
@@ -44,9 +48,9 @@ class intro extends StatelessWidget {
                   onPressed: (){
                 Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>home()),(Route<dynamic> r)=>false);
               },
-                  label: Text("Get Started"),
-                icon: Icon(Icons.arrow_forward_ios_outlined),
-                backgroundColor: Colors.deepPurpleAccent,
+                  label: Text("Get Started",style: TextStyle(color:Colors.black),),
+                icon: Icon(Icons.arrow_forward_ios_outlined,color: Colors.black,),
+                backgroundColor: Color(0xffC6FFDD),
 
 
               ),),

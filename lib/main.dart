@@ -8,22 +8,16 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
-
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
-
       home:AnimatedSplashScreen(
         splash: Image.asset("images/load.png"), nextScreen: intro(),
         duration: 5000,
-        backgroundColor: Colors.cyanAccent,
-        splashTransition: SplashTransition.scaleTransition,
+        splashTransition: SplashTransition.fadeTransition,
         splashIconSize: 3000,
+        backgroundColor: Colors.black,
       ) ,
-
     );
   }
 }

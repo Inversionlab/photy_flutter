@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gallery_saver/gallery_saver.dart';
 import 'package:path_provider/path_provider.dart';
 class fullscreen extends StatelessWidget {
@@ -27,8 +28,9 @@ class fullscreen extends StatelessWidget {
           // final path='${temp.path}/myfile.jpg';
           // await Dio().download(uri,path);
           await GallerySaver.saveImage(uri,toDcim: true);
+          Fluttertoast.showToast(msg: "Downloaded Successfully..");
         },
-        backgroundColor: Colors.white70,
+        backgroundColor: Colors.white54,
         child: Icon(Icons.file_download_outlined),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
